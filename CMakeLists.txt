@@ -20,12 +20,29 @@ find_package(catkin REQUIRED COMPONENTS
 ## Declare ROS messages, services and actions ##
 ################################################
 
-# messages for MPC_TRACKER
 add_message_files(DIRECTORY msg/compton_camera FILES
 
   ClusterList.msg
   Cluster.msg
   Pixel.msg
+  )
+
+add_message_files(DIRECTORY msg/timepix FILES
+
+  TimepixImage.msg
+  RospixStatus.msg
+  )
+
+add_service_files(DIRECTORY srv/timepix FILES
+
+  RospixBatchExposure.srv
+  RospixExposure.srv
+  )
+
+add_service_files(DIRECTORY srv/general FILES
+
+  SetDouble.srv
+  SetInt.srv
   )
 
 ## Generate added messages and services with any dependencies listed here
