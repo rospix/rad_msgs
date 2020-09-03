@@ -20,11 +20,17 @@ find_package(catkin REQUIRED COMPONENTS
 ## Declare ROS messages, services and actions ##
 ################################################
 
+add_message_files(DIRECTORY msg/misc FILES
+
+  Vector3.msg
+  )
+
 add_message_files(DIRECTORY msg/compton_camera FILES
 
   ClusterList.msg
   Cluster.msg
   Pixel.msg
+  Cone.msg
   )
 
 add_message_files(DIRECTORY msg/timepix FILES
