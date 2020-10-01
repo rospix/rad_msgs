@@ -1,2 +1,4 @@
 *.swo
 *.swp
+msg/*.msg
+srv/*.srv
